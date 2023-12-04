@@ -22,6 +22,7 @@ function index(props: {onPress: () => {}}): JSX.Element {
         <Text style={styles.text} text="the plant!" />
       </View>
       <Image
+        testID="plant-image"
         style={styles.image}
         source={require('../../assets/images/onboarding1.jpeg')}
       />

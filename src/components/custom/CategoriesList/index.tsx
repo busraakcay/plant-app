@@ -1,7 +1,6 @@
 import {FlatList, View} from 'react-native';
 import React, {useEffect} from 'react';
 import {useAppDispatch, useAppSelector} from '../../../hooks/reduxHooks';
-import {fetchCategories} from '../../../redux/actions/categoriesActions';
 import CategoriesListItem from '../CategoriesListItem';
 import {styles} from './styles';
 import Loading from '../ActionFeedback/Loading';
@@ -20,7 +19,7 @@ function index(): JSX.Element {
 
   return (
     <>
-      {categoriesLoading && <Loading />}
+      {categoriesLoading && <Loading testID='loading-indicator' />}
       {categoriesError && <Error />}
       {categoriesData.length > 0 && (
         <View style={styles.container}>
